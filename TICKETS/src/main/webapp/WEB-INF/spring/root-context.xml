@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+	<!-- <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> -->
+
+	
+	<!-- DB Connect -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="net.sourceforge.jtds.jdbc.Driver" />
+<!-- 	<property name="url" value="jdbc:jtds:sqlserver://106.246.239.90/ticket;tds=8.0;lastupdatecount=true;useLOBs=false;allowMultiQueries=true" />
+		<property name="username" value="sa" />
+		<property name="password" value="tonmedia12@!" /> -->		
+		<property name="url" value="jdbc:jtds:sqlserver://localhost:1433/ticket;tds=8.0;lastupdatecount=true;useLOBs=false;allowMultiQueries=true" />
+		<property name="username" value="jung" />
+		<property name="password" value="tonmedia12@!" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  		<property name="dataSource" ref="dataSource" />
+  		<property name="mapperLocations" value="classpath*:com/tonmedia/tickets/mapper/*.xml" />
+  		<property name="typeAliasesPackage" value="com.tonmedia.tickets.domain" />
+	</bean>
+	<bean id="sqlSessionMssql" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	<bean id="mapperScannerMssql" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.tonmedia.tickets.mapper" />
+		<property name="sqlSessionTemplateBeanName" value="sqlSessionMssql" />
+	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+
+	<aop:config proxy-target-class="true">
+		<aop:pointcut id="serviceOperation" expression="execution( * com.tonmedia.tickets.service.*Service.*(..))" />
+		<aop:advisor id="transactionAdvisor" pointcut-ref="serviceOperation" advice-ref="txAdvice"/>
+	</aop:config>
+	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="shippinginsert" rollback-for="Exception"/>
+<!-- 			<tx:method name="update*" rollback-for="Exception"/>
+			<tx:method name="remove*" rollback-for="Exception"/> -->
+		</tx:attributes>
+	</tx:advice>
+	
+	<context:component-scan base-package="com.tonmedia">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	<mybatis:scan base-package="com.tonmedia.tickets.mapper" />	
+</beans>

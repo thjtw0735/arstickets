@@ -1,0 +1,330 @@
+@media (min-width: 1000px) {	
+	/* 부모창 */
+	.seat_level {
+		float: left;
+	    width: 49.35%;
+	    text-align: center;
+	    border-style: ridge;
+	    height: 32px;
+	    font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background : white;
+	    color : #172030;
+	}
+	
+	
+	.ticket_check {
+		float: left;
+		width : 49.3%;
+		text-align : center;
+		border-style: ridge;
+		height: 32px;
+		font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background: #172030;
+	 	color : white;
+	}
+	
+	.contents_left{
+		width: 65%;
+		float: left;
+		margin-top : 30px;
+		padding-left: 45px;
+	}
+	
+	.table_left {
+		text-align : center;
+		width : 100%;
+		height : 560px;
+	}
+	
+	.table_right {
+		width : 100%;
+		height : 400px;
+	}
+	
+	.contents_top {
+		width: 100%;
+	    display: inline-block;
+	    font-size: 30px;
+	    font-weight: bold;
+	    font-style: oblique;
+	    text-align: center;
+	    margin-top : 20px;
+	    background : #172030;
+	}
+	
+	
+	.contents_right{
+	text-align : center;
+	width:25%;
+	float:left;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top: 30px;
+	}
+	
+	
+	.rvbutton {
+		width: 100%;
+	}
+	
+	.bt {
+		float: left;
+	    width: 46%;
+	    height: 100px;
+	    margin-top: 60px;
+	    margin-left: 10px;
+	    background: rgb(23, 32, 48);
+	    color: white;
+	    font-weight: bold;
+	    font-size: 21px;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    border-width: medium;
+	}
+	
+	.image{
+		width : 60px;
+	}
+	
+	.home{
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 33px;
+	    width: 565px;
+	    text-align: center;
+	    border: 0px;
+	    background: rgba(23, 32, 48, 1);
+	    color: white;
+	    font-weight: bold;
+	    font-family: sans-serif;
+	}
+	
+	.detail{
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 13px;
+	    width: 150px;
+	    text-align: center;
+	    border: 0px;
+	    font-weight: bold;
+	    background: rgba(23, 32, 48, 1);
+	    color : white;
+	}
+	
+	.delivery{
+		width: 95%;
+	    text-align: center;
+	    border: 0px;
+	}
+	
+	.rvheight{
+	    background: white;
+	    height: 37px;
+	    background: #ffffff;
+	    color: #172030;
+	    font-weight: 1000;
+	    border-style: hidden;
+	}
+	
+	.prheight{
+	    background: white;
+	    background: #ffffff;
+	    color: #172030;
+	    font-weight: 1000;
+	    border-style: hidden;
+	}
+	
+	.rvuser{
+		font-weight: bold;
+	    border-top-color: #f00000;
+	    background: white;
+	    border-top-style: outset;
+	    border-width: medium;
+	}
+	
+	.truser{
+	    border-width: thin;
+	    background: rgb(244, 244, 244);
+	    color: rgb(23, 32, 48);
+	    font-weight: bold;
+	}
+	
+	
+	.findad{
+		    background: #172030;
+	    color: white;
+	    border-style: solid;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    width: 23%;
+	}
+}
+
+@media (max-width: 1000px) {	
+	/* 부모창 */
+	.seat_level {
+		float: left;
+	    width: 49.35%;
+	    text-align: center;
+	    border-style: ridge;
+	    height: 32px;
+	    font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background : white;
+	    color : #172030;
+	}
+	
+	
+	.ticket_check {
+		float: left;
+		width : 49.3%;
+		text-align : center;
+		border-style: ridge;
+		height: 32px;
+		font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background: #172030;
+	 	color : white;
+	}
+	
+	.contents_left{
+		width: 91%;
+		float: left;
+		margin-top : 30px;
+		padding-left: 45px;
+	}
+	
+	.table_left {
+		text-align : center;
+		width : 100%;
+		height : 700px;
+	}
+	
+	.table_right {
+		width : 100%;
+		height : 370px;
+	}
+	
+	.contents_top {
+		width: 100%;
+	    display: inline-block;
+	    font-size: 30px;
+	    font-weight: bold;
+	    font-style: oblique;
+	    text-align: center;
+	    margin-top : 20px;
+	    background : #172030;
+	}
+	
+	
+	.contents_right{
+	text-align : center;
+	width:93%;
+	float:left;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top: 30px;
+	}
+	
+	
+	.rvbutton {
+		width: 100%;
+	}
+	
+	.bt {
+	    width: 46%;
+	    height: 100px;
+	    margin-top: 60px;
+	    margin-left: 10px;
+	    background: rgb(23, 32, 48);
+	    color: white;
+	    font-weight: bold;
+	    font-size: 21px;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    border-width: medium;
+	}
+	
+	.image{
+		width : 60px;
+	}
+	
+	.home{
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 33px;
+	    width: 565px;
+	    text-align: center;
+	    border: 0px;
+	    background: rgba(23, 32, 48, 1);
+	    color: white;
+	    font-weight: bold;
+	    font-family: sans-serif;
+	}
+	
+	.detail{
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 13px;
+	    width: 150px;
+	    text-align: center;
+	    border: 0px;
+	    font-weight: bold;
+	    background: rgba(23, 32, 48, 1);
+	    color : white;
+	}
+	
+	.delivery{
+		width: 95%;
+	    text-align: center;
+	    border: 0px;
+	}
+	
+	.rvheight{
+	    background: white;
+	    height: 37px;
+	    background: #ffffff;
+	    color: #172030;
+	    font-weight: 1000;
+	    border-style: hidden;
+	}
+	
+	.prheight{
+	    background: white;
+	    background: #ffffff;
+	    color: #172030;
+	    font-weight: 1000;
+	    border-style: hidden;
+	}
+	
+	.rvuser{
+		font-weight: bold;
+	    border-top-color: #f00000;
+	    background: white;
+	    border-top-style: outset;
+	    border-width: medium;
+	}
+	
+	.truser{
+	    border-width: thin;
+	    background: rgb(244, 244, 244);
+	    color: rgb(23, 32, 48);
+	    font-weight: bold;
+	}
+	
+	
+	.findad{
+		    background: #172030;
+	    color: white;
+	    border-style: solid;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    width: 23%;
+	}
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tonmedia.tickets.mapper.UserMapper">
+	
+	<select id="checkId" parameterType="com.tonmedia.tickets.domain.User" resultType="Integer">
+		select count(*) from a_user where email=#{email}
+	</select>
+	
+	<select id="join" parameterType="com.tonmedia.tickets.domain.User">
+		insert into a_user(email, passwd, name, address, phone ) values(#{email}, #{passwd}, #{name}, #{address}, #{phone})
+	</select>
+	
+	<select id="loginUser" parameterType="com.tonmedia.tickets.domain.User" resultType="Integer">
+		select count(*) from a_user where email=#{email} and passwd=#{passwd}
+	</select>
+	
+	<select id="findpw" parameterType="com.tonmedia.tickets.domain.User" resultType="String">
+		select passwd from a_user where email=#{email}
+	</select>
+	
+	<select id="select" parameterType="com.tonmedia.tickets.domain.User" resultType="com.tonmedia.tickets.domain.User">
+		select * from a_user where email=#{email}
+	</select>
+	
+	<update id="upload" parameterType="com.tonmedia.tickets.domain.User" >
+		update a_user set image=#{image} where email=#{email}
+	</update>
+	
+	<select id="selectImg" parameterType="com.tonmedia.tickets.domain.User" resultType="String">
+		select image from a_user where email=#{email}
+	</select>
+	
+	
+</mapper>

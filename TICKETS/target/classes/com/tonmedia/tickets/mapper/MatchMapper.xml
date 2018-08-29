@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tonmedia.tickets.mapper.MatchMapper">
+	<select id="selectDate" parameterType="com.tonmedia.tickets.domain.Match" resultType="Integer">
+		select count(*) from a_match where match_date=#{match_date}
+	</select>
+	
+	<select id="insert" parameterType="com.tonmedia.tickets.domain.Match">
+		insert into a_match(match_home, match_away, match_himage, match_aimage, match_date, match_stadium ) values( #{match_home}, #{match_away}, #{match_himage}, #{match_aimage}, #{match_date}, #{match_stadium})
+	</select>
+	
+	<select id="selectMatch" parameterType="com.tonmedia.tickets.domain.Match" resultType="com.tonmedia.tickets.domain.Match">
+		select * from a_match where match_date=#{match_date}
+	</select>
+</mapper>

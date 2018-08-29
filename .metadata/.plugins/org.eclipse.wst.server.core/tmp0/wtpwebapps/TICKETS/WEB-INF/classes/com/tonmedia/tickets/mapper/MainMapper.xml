@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tonmedia.tickets.mapper.MainMapper">
+	
+	<select id="list" statementType="CALLABLE" resultType="hashMap">
+		call TEMP_GETTMS_STATE(#{devtype})
+	</select>
+	
+ 	<select id="mlist" statementType="CALLABLE" parameterType="map" resultType="hashMap">
+		call dbo.TEMP_GETTMS_EMAIL_TO_DATE (#{devtype},#{ospid}, #{datefi}, #{mailresult})
+	</select>
+	
+</mapper>

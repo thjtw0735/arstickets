@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tonmedia.tickets.mapper.ShippingMapper">
+	
+	<insert id="insert" parameterType="com.tonmedia.tickets.domain.Shipping">
+		insert into a_shipping( match_num, shipping_ticket, shipping_count, shipping_date, shipping_name, shipping_address, shipping_phone, shipping_status, email ) values( #{match_num},#{shipping_ticket}, #{shipping_count}, CONVERT(VARCHAR(10), GETDATE(), 120) , #{shipping_name}, #{shipping_address}, #{shipping_phone}, #{shipping_status}, #{email})
+	</insert>
+	
+	<select id="getcount" parameterType="com.tonmedia.tickets.domain.Shipping" resultType="Integer">
+		select count(*) from a_shipping where email=#{email}
+	</select>
+	
+	<select id="getcountDate" parameterType="com.tonmedia.tickets.domain.Shipping" resultType="Integer">
+		<![CDATA[select count(*) from a_shipping where email=#{email} and #{shipping_date} <= shipping_date]]>
+	</select>
+	
+	
+<!-- 	<select id="select" parameterType="com.tonmedia.tickets.domain.Shipping" resultType="com.tonmedia.tickets.domain.Shipping">
+		select * from a_shipping where email=#{email}
+	</select> -->
+	
+	<select id="select" parameterType="map" resultType="com.tonmedia.tickets.domain.Shipping">
+		<![CDATA[select * from ( select ROW_NUMBER() over(order by shipping_num desc) as row_num, * from a_shipping where email=#{email}) A where row_num >= #{start} and ROW_NUM <= #{end} and email=#{email}]]>
+	</select>
+	
+	<select id="selectDate" parameterType="map" resultType="com.tonmedia.tickets.domain.Shipping">
+		<![CDATA[select * from ( select ROW_NUMBER() over(order by shipping_num desc) as row_num, * from a_shipping where email=#{email} and #{date} <= shipping_date) A where row_num >= #{start} and ROW_NUM <= #{end} and email=#{email} and #{date} <= shipping_date]]>
+	</select>
+	
+	
+ 	<!-- <select id="selectDate" parameterType="com.tonmedia.tickets.domain.Shipping" resultType="com.tonmedia.tickets.domain.Shipping">
+		<![CDATA[select * from a_shipping where email=#{email} and #{shipping_date} <= shipping_date]]>
+	</select> -->
+	
+	<select id="selectMatch" parameterType="int" resultType="com.tonmedia.tickets.domain.Match">
+		select * from a_match where match_num=#{match_num}
+	</select>
+	
+	<update id="update" parameterType="com.tonmedia.tickets.domain.Shipping">
+		update a_shipping set shipping_status=#{shipping_status} where shipping_num=#{shipping_num}
+	</update>
+</mapper>

@@ -1,0 +1,425 @@
+/* 모달창 */
+@media (min-width: 1000px) {
+	.wrap {
+	     margin-left: 23%;
+	    margin-top: 13%;
+	    margin-bottom: 11%;
+	    width: 362px;
+	    overflow: hidden;
+	}
+	
+	ul, ol {
+	    list-style: none;
+	    float: left;
+	    overflow: hidden;
+	    padding: 0;
+	    margin: 0;
+	}
+	.colsHead {
+	    width: 100%;
+	    padding-left: 30px;
+	}
+	.rowsHead {
+	    width: 30px;
+	}
+	li {
+	    width: 30px;
+	    height: 30px;
+	    border: 1px;
+	    text-align: center;
+	    line-height: 30px;
+	    color : white;
+	}
+	.seat li {
+	    float: left;
+	    border: 1px solid skyblue;
+	}
+	
+	.colsHead li {
+	    float: left;
+	    border: 1px solid white;
+	}
+	.rowsHead li {
+	    border: 1px solid white;
+	}
+	.reserve {
+	    background: red;
+	}
+	
+	
+	/* 부모창 */
+	.seat_level {
+		float: left;
+	    width: 49.4%;
+	    text-align: center;
+	    border-style: ridge;
+	    height: 32px;
+	    font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	 	background: #172030;
+	 	color : white;
+	}
+	
+	
+	.ticket_check {
+		float: left;
+		width : 49.3%;
+		text-align : center;
+		border-style: ridge;
+		height: 32px;
+		font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background : white;
+	    color : #172030;
+	}
+	
+	.contents_left{
+		width: 65%;
+		float: left;
+		margin-top : 30px;
+		padding-left: 45px;
+	}
+	
+	.table_left {
+		text-align : center;
+		width : 100%;
+		height : 560px;
+		background: #494c5a;
+	}
+	
+	.table_right {
+		width : 100%;
+		height : 400px;
+		background-color: rgb(251, 251, 251);
+	}
+	
+	.contents_top {
+		width: 100%;
+	    display: inline-block;
+	    font-size: 30px;
+	    font-weight: bold;
+	    font-style: oblique;
+	    text-align: center;
+	    margin-top : 20px;
+	    background : #172030;
+	}
+	
+	
+	.contents_right{
+	text-align : center;
+	width:25%;
+	float:left;
+	padding-left:20px;
+	padding-right:20px;
+	margin-top: 30px;
+	}
+	
+	
+	.button {
+		width: 100%;
+	}
+	
+	.bt {
+		float: left;
+	    width: 46%;
+	    height: 100px;
+	    margin-top: 60px;
+	    margin-left: 10px;
+	    background: rgb(23, 32, 48);
+	    color: white;
+	    font-weight: bold;
+	    font-size: 21px;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    border-width: medium;
+	}
+	
+	.image{
+		width : 60px;
+	}
+	
+	.home{
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 33px;
+	    width: 565px;
+	    text-align: center;
+	    border: 0px;
+	    background: rgba(23, 32, 48, 1);
+	    color: white;
+	    font-weight: bold;
+	    font-family: sans-serif;
+	}
+	
+	.detail{
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 13px;
+	    width: 150px;
+	    text-align: center;
+	    border: 0px;
+	    font-weight: bold;
+	    background: rgba(23, 32, 48, 1);
+	    color : white;
+	    
+	}
+	
+	.resv{
+		float : right;
+	}
+	
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    left: 5%;
+	    top: 24%;
+	    width: 64%; /* Full width */
+	    height: 68%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+	}
+	
+	.choicestyle {
+	    background-color: rgb(251, 251, 251);
+	    width: 25%;
+	    font-size: 31px;
+	    font-weight: bold;
+	}
+	
+	.topstyle {
+		font-weight : bold;
+	}
+	
+	
+	.fieldset {
+		border: 0px;
+	    margin: 0px;
+	    float: left;
+	}
+	
+	.result {
+		margin: 0px;
+	    font-size: 21px;
+	    color: white;
+	    font-weight: bold;
+	    float: left;
+	}
+	
+}
+
+@media (max-width: 1000px) {
+	.wrap {
+		margin-left: 13%;
+	    margin-top: 11%;
+	    margin-bottom: 11%;
+	    width: 75%;
+	    overflow: hidden;
+	}
+	
+	ul, ol {
+	    list-style: none;
+	    float: left;
+	    overflow: hidden;
+	    padding: 0;
+	    margin: 0;
+	}
+	.colsHead {
+	   width: 100%;
+   		 padding-left: 63px;
+	}
+	.rowsHead {
+	    width: 63px;
+	}
+	li {
+	   width: 57px;
+	    height: 47px;
+	    border: 1px;
+	    text-align: center;
+	    line-height: 30px;
+	    color: white;
+	}
+	.seat li {
+	    float: left;
+	    border: 1px solid skyblue;
+	}
+	
+	.colsHead li {
+	    float: left;
+	    border: 1px solid white;
+	}
+	.rowsHead li {
+	    border: 1px solid white;
+	}
+	.reserve {
+	    background: red;
+	}
+	
+	
+	/* 부모창 */
+	.seat_level {
+		float: left;
+	    width: 49.4%;
+	    text-align: center;
+	    border-style: ridge;
+	    height: 32px;
+	    font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	 	background: #172030;
+	 	color : white;
+	}
+	
+	
+	.ticket_check {
+		float: left;
+		width : 49.3%;
+		text-align : center;
+		border-style: ridge;
+		height: 32px;
+		font-size: 17px;
+	    font-weight: bold;
+	    padding-top: 10px;
+	    background : white;
+	    color : #172030;
+	}
+	
+	.contents_left{
+		width: 91%;
+	    float: left;
+	    margin-top: 30px;
+	    padding-left: 45px;
+	}
+	
+	.table_left {
+		text-align : center;
+		width : 100%;
+		height : 660px;
+		background: #494c5a;
+	}
+	
+	.table_right {
+		width : 100%;
+		height : 400px;
+		background-color: rgb(251, 251, 251);
+	}
+	
+	.contents_top {
+		width: 100%;
+	    display: inline-block;
+	    font-size: 30px;
+	    font-weight: bold;
+	    font-style: oblique;
+	    text-align: center;
+	    margin-top : 20px;
+	    background : #172030;
+	}
+	
+	
+	.contents_right{
+    text-align: center;
+    width: 91%;
+    float: left;
+    padding-left: 42px;
+    padding-right: 20px;
+    margin-top: 41px;
+	}
+	
+	
+	.button {
+		width: 100%;
+	}
+	
+	.bt {
+		float: left;
+	    width: 46%;
+	    height: 100px;
+	    margin-top: 60px;
+	    margin-left: 10px;
+	    background: rgb(23, 32, 48);
+	    color: white;
+	    font-weight: bold;
+	    font-size: 21px;
+	    border-top-color: red;
+	    border-bottom-color: red;
+	    border-width: medium;
+	}
+	
+	.image{
+		width : 60px;
+	}
+	
+	.home{
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 33px;
+	    width: 565px;
+	    text-align: center;
+	    border: 0px;
+	    background: rgba(23, 32, 48, 1);
+	    color: white;
+	    font-weight: bold;
+	    font-family: sans-serif;
+	}
+	
+	.detail{
+		padding-top: 10px;
+	    padding-bottom: 10px;
+	    font-size: 13px;
+	    width: 150px;
+	    text-align: center;
+	    border: 0px;
+	    font-weight: bold;
+	    background: rgba(23, 32, 48, 1);
+	    color : white;
+	    
+	}
+	
+	.resv{
+		float : right;
+	}
+	
+	.modal {
+	   display: none;
+	    position: fixed;
+	    z-index: 1;
+	    left: 5%;
+	    top: 13.6%;
+	    width: 90%;
+	    height: 44.5%;
+	    overflow: auto;
+	    background-color: rgb(0,0,0);
+	    background-color: rgba(0,0,0,0.75);
+	}
+	
+	.choicestyle {
+	    background-color: rgb(251, 251, 251);
+	    width: 25%;
+	    font-size: 31px;
+	    font-weight: bold;
+	}
+	
+	.topstyle {
+		font-weight : bold;
+	}
+	
+	
+	.fieldset {
+		border: 0px;
+	    margin: 0px;
+	    float: left;
+	}
+	
+	.result {
+		margin: 0px;
+	    font-size: 21px;
+	    color: white;
+	    font-weight: bold;
+	    float: left;
+	}
+	
+	
+}
