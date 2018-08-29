@@ -18,7 +18,7 @@
     <div class="container">
       <h1>Login</h1>
       <br><br>
-      <label for="Email"><b>Email!</b></label>
+      <label for="Email"><b>Email</b></label>
       <input type="text" placeholder="Enter Email-address" name="email" id="emailsign" required>
       <label for="psw"><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="passwd" id="passwdsign" required>
